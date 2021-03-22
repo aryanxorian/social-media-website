@@ -13,7 +13,7 @@ body {
     background-color: white;
   }
   
-  /* Full-width input fields */
+ 
   input[type=text], input[type=password] {
     width: 100%;
     padding: 15px;
@@ -28,7 +28,7 @@ body {
     outline: none;
   }
   
-  /* Overwrite default styles of hr */
+
   hr {
       border: 1px solid #f1f1f1;
     margin-bottom: 25px;
@@ -67,12 +67,12 @@ body {
     color:white;
   }
   
-  /* Add a blue text color to links */
+ 
   a {
     color: dodgerblue;
   }
   
-  /* Set a grey background color and center the text of the "sign in" section */
+
   .signin {
     background-color: #f1f1f1;
     text-align: center;
@@ -80,4 +80,16 @@ body {
   .sign-container{
     margin-top:100px;
     padding:40px;
+  }
+  /* sign up page starts*/
+  .signup-container{
+    width:60%;
+    margin:auto;
+  }
+  /*Mobile screen */
+  @media screen and(max-width:600px){
+    .home-small{
+      display:none;
+    }
+
   }

@@ -20,7 +20,7 @@ if(isset($_POST['login']))
                 {
                     $row=mysqli_fetch_assoc($result);
                     $_SESSION['email']=$row['email'];
-                    $_SESSION['name']=$row['name'];
+                    $_SESSION['firstname']=$row['firstname'];
                     header('Location:home.php');
                     
                     
@@ -43,7 +43,7 @@ if(isset($_POST['login']))
 
 ?>
 <?php 
-if (!isset($_SESSION['email']))
+if (!isset($_SESSION['email']) && !isset($_SESSION['firstname'] ))
 {
  ?>
 <!doctype HTML>
@@ -74,7 +74,7 @@ if (!isset($_SESSION['email']))
       <div class="container sign-container" >
         <div class="row">
         
-          <div class="col-md-6">
+          <div class="col-md-6 home-small">
             <div class="container">
               <h1> Let's Meet </h1>
               <h4> Find friends near you</h4>

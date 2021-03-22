@@ -14,13 +14,13 @@ body {
   }
   
  
-  input[type=text], input[type=password] {
+  input[type=text], input[type=password],input[type=email],input[type=date]{
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background: #f1f1f1;
+    background-color:#f1f1f1;
   }
   
   input[type=text]:focus, input[type=password]:focus {
@@ -85,6 +85,9 @@ body {
   .signup-container{
     width:60%;
     margin:auto;
+  }
+  .error{
+    color:red;
   }
   /*Mobile screen */
   @media screen and(max-width:600px){

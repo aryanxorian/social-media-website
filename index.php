@@ -17,28 +17,25 @@ if(isset($_POST['login']))
             $query="select * from users where email='$email' and password='$psw'";
             $result=mysqli_query($conn,$query);
             if(mysqli_num_rows($result)==1)
-                {
-                    $row=mysqli_fetch_assoc($result);
-                    $_SESSION['email']=$row['email'];
-                    $_SESSION['firstname']=$row['firstname'];
-                    header('Location:home.php');
-                    
-                    
-                }
-            else                {
-                    $error="email/Password invalid";
+              {
+                  $row=mysqli_fetch_assoc($result);
+                  $_SESSION['email']=$row['email'];
+                  $_SESSION['firstname']=$row['firstname'];
+                  header('Location:home.php');
+              }
+            else
+              {
+                  $error="email/Password invalid";
 
-                }
-
-            
-
+              }
 
         }
-        else{
+        else
+          {
             
 
-        }
- }
+          }
+  }
  mysqli_close($conn);
 
 ?>
@@ -71,9 +68,9 @@ if (!isset($_SESSION['email']) && !isset($_SESSION['firstname'] ))
       }
       </style>
     <body>
+
       <div class="container sign-container" >
         <div class="row">
-        
           <div class="col-md-6 home-small">
             <div class="container">
               <h1> Let's Meet </h1>
@@ -85,32 +82,19 @@ if (!isset($_SESSION['email']) && !isset($_SESSION['firstname'] ))
 
           
           <div class="col-md-6">
-
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" >
-
               <div class="container login">
-                  <p class="alert-denger" ><?php echo $error; ?></p>
-                  
-                  
-            
-
+                <p class="alert-denger" ><?php echo $error; ?></p>
                   <label for="email"><b>Email</b></label>
                   <input type="text" placeholder="Enter Email" name="email" id="email" required>
-
                   <label for="psw"><b>Password</b></label>
                   <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-                  
                   <p></p>
-
                   <button type="submit" class="loginbtn" name="login">Sign In</button>
                   <hr>
-                  <a href="signup.php" > <button class="registerbtn"> Create New Account </button></a>
-                  
               </div>
-            
-            
             </form>
+            <a href="signup.php" > <button class="registerbtn"> Create New Account </button></a>
           </div>
         </div>
       </div>

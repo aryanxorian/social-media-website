@@ -29,7 +29,7 @@ if(isset($_POST['signup']))
                         }
                     else
                         {
-                            $error="Data is not inserted";
+                            $error="email already exists/please use a different email id";
                         }
                 }
 
@@ -141,5 +141,8 @@ if (!isset($_SESSION['email']) &&  !isset($_SESSION['firstname']))
 
 </html>
 <?php
+}
+else{
+    header("Location:home.php");
 }
 ?>
